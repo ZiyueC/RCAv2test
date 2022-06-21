@@ -1,7 +1,7 @@
 #' Compute Reference Component features for clustering analysis
 #'
 #' @param sc_data data object from a RCA object.
-#' @param method Either "GlobalPanel"(default) or "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoPanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom"
+#' @param method Either "GlobalPanel"(default) or "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoImmunePanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom"
 #' @param customPath directory path (including filename) to any custom panel stored in RDS format. Only used if method == "Custom".
 #' @param corMeth Any of the correlation measures supported by R, defaults to pearson
 #' @param power power to raise up to for the RCA features before clustering, default is 4
@@ -347,7 +347,7 @@ dataProjectWorker <-
 #' Compute Reference Component features for clustering analysis
 #'
 #' @param rca.obj RCA object.
-#' @param method Either "GlobalPanel" (default) or "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoPanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom"
+#' @param method Either "GlobalPanel" (default) or "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoImmunePanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom"
 #' @param customPath directory path (including filename) to any custom panel stored in RDS format. Only used if method == "Custom".
 #' @param corMeth Any of the correlation measures supported by R (default pearson)
 #' @param power power to raise up to for the RCA features before clustering (default 4)
@@ -392,7 +392,7 @@ dataProject <-
 #' Compute Reference Component features for clustering analysis against a list of panels
 #'
 #' @param rca.obj RCA object.
-#' @param method List of panel identifiers containing "GlobalPanel", "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoPanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom". Default is: list("NovershternPanel","MonacoPanel","GlobalPanel_CellTypes").
+#' @param method List of panel identifiers containing "GlobalPanel", "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoImmunePanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom". Default is: list("NovershternPanel","MonacoImmunePanel","GlobalPanel_CellTypes").
 #' @param customPath directory path (including filename) to any custom panel stored in RDS format. Only used if method == "Custom".
 #' @param corMeth Any of the correlation measures supported by R (default pearson)
 #' @param power power to raise up to for the RCA features before clustering (default 4)
@@ -411,7 +411,7 @@ dataProject <-
 
 dataProjectMultiPanel <-
     function(rca.obj,
-             method = list("NovershternPanel", "MonacoPanel", "GlobalPanel_CellTypes"),
+             method = list("NovershternPanel", "MonacoImmunePanel", "GlobalPanel_CellTypes"),
              customPath = NULL,
              corMeth = "pearson",
              power = 4,

@@ -163,7 +163,7 @@ In addition to the *GlobalPanel*, RCA now provides *12* reference panels:
 
 * *GlobalPanel* from the original RCA (Li et al., 2017) containing both primary cell types and tissues. Can be limited to only cell types with *"GlobalPanel_CellTypes*. 
 * *ColonEpiPanel*: 9 colon epithelial samples from Li et al. (Nature genetics, 2017).
-* *MonacoPanel*: 29 PBMC cell types from Monaco, G., et al. (Cell reports, 2019).
+* *MonacoImmunePanel*: 29 PBMC cell types from Monaco, G., et al. (Cell reports, 2019).
 * *MonacoBCellPanel*: 5 B cell sub-types from Monaco, G., et al. (Cell reports, 2019).
 * *MonacoMonoPanel*: 5 Monocyte sub-types from Monaco, G., et al. (Cell reports, 2019).
 * *MonacoTCellPanel*: 15 T cell sub-types from Monaco, G., et al. (Cell reports, 2019).
@@ -192,7 +192,7 @@ PBMCs<-RCAv2::dataProject(PBMCs,
 To benefit from multiple panels at the same time, users can exploit the *dataProjectMultiPanel* function:
 
 ```{r}
-PBMCs<-RCAv2::dataProjectMultiPanel(PBMCs,method=list("NovershternPanel", "MonacoPanel", "GlobalPanel_CellTypes"),corMeth="pearson")
+PBMCs<-RCAv2::dataProjectMultiPanel(PBMCs,method=list("NovershternPanel", "MonacoImmunePanel", "GlobalPanel_CellTypes"),corMeth="pearson")
 ```
 
 The *dataProjectMultiPanel* function projects cells by default against the *Novershtern*, the *Monaco* and cell types from the *Global panel*.

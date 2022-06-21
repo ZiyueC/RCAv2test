@@ -6,7 +6,7 @@
 \usage{
 dataProjectMultiPanel(
   rca.obj,
-  method = list("NovershternPanel", "MonacoPanel", "GlobalPanel_CellTypes"),
+  method = list("NovershternPanel", "MonacoImmunePanel", "GlobalPanel_CellTypes"),
   customPath = NULL,
   corMeth = "pearson",
   power = 4,
@@ -17,7 +17,7 @@ dataProjectMultiPanel(
 \arguments{
 \item{rca.obj}{RCA object.}
 
-\item{method}{List of panel identifiers containing "GlobalPanel", "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoPanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom". Default is: list("NovershternPanel","MonacoPanel","GlobalPanel_CellTypes").}
+\item{method}{List of panel identifiers containing "GlobalPanel", "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoImmunePanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom". Default is: list("NovershternPanel","MonacoPanel","GlobalPanel_CellTypes").}
 
 \item{customPath}{directory path (including filename) to any custom panel stored in RDS format. Only used if method == "Custom".}
 

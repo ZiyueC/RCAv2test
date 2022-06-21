@@ -17,7 +17,7 @@ dataProjectWorker(
 \arguments{
 \item{sc_data}{data object from a RCA object.}
 
-\item{method}{Either "GlobalPanel"(default) or "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoPanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom"}
+\item{method}{Either "GlobalPanel"(default) or "GlobalPanel_CellTypes", "ColonEpiPanel","MonacoImmunePanel","ENCODEMousePanel","ENCODEHumanPanel","ZhangMouseBrainPanel","NovershternPanel","NovershternTCellPanel","MonacoTCellPanel","MonacoBCellPanel","MonacoMonoPanel", "CITESeqPanel" or "Custom"}
 
 \item{customPath}{directory path (including filename) to any custom panel stored in RDS format. Only used if method == "Custom".}
 

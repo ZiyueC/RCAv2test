@@ -15,10 +15,10 @@ test_that("dataProject GlobalPanel", {
     expect_equal(nrow(dataProject(rca.obj = pbmc_small_rca, method = "GlobalPanel")$projection.data), 179)
 })
 
-test_that("dataProject MonacoPanel", {
-    expect_s4_class(dataProject(rca.obj = pbmc_small_rca, method = "MonacoPanel"), class = "RCA")
-    expect_equal(ncol(dataProject(rca.obj = pbmc_small_rca, method = "MonacoPanel")$projection.data), ncol(pbmc_small_rca$data))
-    expect_equal(nrow(dataProject(rca.obj = pbmc_small_rca, method = "MonacoPanel")$projection.data), 29)
+test_that("dataProject MonacoImmunePanel", {
+    expect_s4_class(dataProject(rca.obj = pbmc_small_rca, method = "MonacoImmunePanel"), class = "RCA")
+    expect_equal(ncol(dataProject(rca.obj = pbmc_small_rca, method = "MonacoImmunePanel")$projection.data), ncol(pbmc_small_rca$data))
+    expect_equal(nrow(dataProject(rca.obj = pbmc_small_rca, method = "MonacoImmunePanel")$projection.data), 29)
 })
 
 test_that("dataProject MonacoBCellPanel", {
